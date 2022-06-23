@@ -1,0 +1,50 @@
+@import "./colors.scss";
+
+.components > div {
+  padding-top: 10px;
+}
+
+.switch {
+  width: 45px;
+  padding: 3px;
+  border: 1px solid $grey;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 15px;
+  height: 15px;
+  background-color: $grey;
+  border-radius: 100%;
+  position: relative;
+  transition: all 0.3s;
+  left: 22px;
+
+  &.benefits {
+    background-color: $benefits;
+  }
+
+  &.target {
+    background-color: $targetBonus;
+  }
+
+  &.sign-on {
+    background-color: $signOnBonus;
+  }
+
+  &.equity {
+    background-color: $equity;
+  }
+
+  &.base-salary {
+    background-color: $baseSalary;
+  }
+}
+
+.switch.toggle-off .toggle {
+  left: 0;
+  background-color: $grey;
+}
