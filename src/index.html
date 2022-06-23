@@ -11,16 +11,22 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header pad-lr-80 pad-tb-30 text-align-center">
       <h1 class="header-title">Compensation Projection</h1>
       <p class="header-des">
         Here's what your total compensation amount could look like over
         time.Explore with various scenarios and see your earning potential.
       </p>
     </header>
-    <section class="main-section flex flex-row flex-jsb">
-      <div class="menu">
-        <!-- dropdown -->
+    <section class="main-section pad-lr-80 pad-tb-30 flex flex-row flex-jsb">
+      <div class="menu pad-20">
+        <select class="dropdown pad-lr-10 pad-tb-5">
+          <option value="all" selected>All</option>
+          <option value="year1">Year 1</option>
+          <option value="year2">Year 2</option>
+          <option value="year3">Year 3</option>
+          <option value="year4">Year 4</option>
+        </select>
         <div class="flex flex-col components">
           <div class="flex flex-row flex-jsb">
             <div>Benefits</div>
@@ -59,17 +65,43 @@
           </div>
         </div>
       </div>
-      <div class="graph flex flex-row flex-jsa">
+      <div class="graph flex flex-row flex-jsa text-align-center">
         <div class="bar flex flex-col">
+          <div class="total-salary pad-10">$ 217,900</div>
+          <div class="benefits" style="height: 80px"></div>
+          <div class="target" style="height: 20px"></div>
+          <div class="sign-on" style="height: 80px"></div>
+          <div class="equity" style="height: 40px"></div>
+          <div class="base-salary" style="height: 180px"></div>
+          <div class="year pad-10">Year 1</div>
+        </div>
+        <div class="bar flex flex-col">
+          <div class="total-salary pad-10">$ 270,000</div>
           <div class="benefits" style="height: 80px"></div>
           <div class="target" style="height: 80px"></div>
           <div class="sign-on" style="height: 80px"></div>
           <div class="equity" style="height: 80px"></div>
           <div class="base-salary" style="height: 80px"></div>
+          <div class="year pad-10">Year 2</div>
         </div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+        <div class="bar flex flex-col">
+          <div class="total-salary pad-10">$ 359,990</div>
+          <div class="benefits" style="height: 80px"></div>
+          <div class="target" style="height: 80px"></div>
+          <div class="sign-on" style="height: 80px"></div>
+          <div class="equity" style="height: 80px"></div>
+          <div class="base-salary" style="height: 80px"></div>
+          <div class="year pad-10">Year 3</div>
+        </div>
+        <div class="bar flex flex-col">
+          <div class="total-salary pad-10">$ 500,000</div>
+          <div class="benefits" style="height: 80px"></div>
+          <div class="target" style="height: 80px"></div>
+          <div class="sign-on" style="height: 80px"></div>
+          <div class="equity" style="height: 80px"></div>
+          <div class="base-salary" style="height: 80px"></div>
+          <div class="year pad-10">Year 4</div>
+        </div>
       </div>
     </section>
   </body>
