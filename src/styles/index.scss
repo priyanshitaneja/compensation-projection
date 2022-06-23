@@ -35,6 +35,17 @@
 
   .graph {
     width: 60%;
+    position: relative;
+
+    .compensation {
+      position: absolute;
+      right: 37px;
+      color: $dark-grey;
+      background-color: $white;
+      border: 1px solid $grey;
+      border-radius: 5px;
+      box-shadow: #0000001a 0 1px 2px 0;
+    }
 
     .bar {
       width: 120px;
@@ -67,6 +78,33 @@
       .year {
         padding-bottom: 0;
       }
+    }
+  }
+
+  .modal {
+    width: 600px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: #00000029 0 1px 4px;
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      border: none;
+      background: none;
+      color: $dark-grey;
     }
   }
 }

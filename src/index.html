@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/e591b4e89f.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header pad-lr-80 pad-tb-30 text-align-center">
@@ -81,6 +82,7 @@
         </div>
       </div>
       <div class="graph flex flex-row flex-jsa text-align-center">
+        <button class="compensation pad-tb-5 pad-lr-30" id="compensation">Compensation</button>
         <div class="bar flex flex-col">
           <div class="total-salary pad-10">$ 217,900</div>
           <div class="benefits" style="height: 80px"></div>
@@ -117,6 +119,11 @@
           <div class="base-salary" style="height: 80px"></div>
           <div class="year pad-10">Year 4</div>
         </div>
+      </div>
+      <div id="modal" class="modal">
+        <button class="modal-close">
+          <i class="fa-solid fa-x"></i>
+        </button>
       </div>
     </section>
   </body>
