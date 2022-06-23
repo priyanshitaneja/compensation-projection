@@ -30,4 +30,35 @@
     width: 25%;
     padding: 20px;
   }
+
+  .graph {
+    width: 60%;
+
+    .bar {
+      width: 120px;
+      background-color: $grey;
+      height: 400px;
+      align-self: flex-end;
+
+      .benefits {
+        background-color: $benefits;
+      }
+
+      .target {
+        background-color: $targetBonus;
+      }
+
+      .sign-on {
+        background-color: $signOnBonus;
+      }
+
+      .equity {
+        background-color: $equity;
+      }
+
+      .base-salary {
+        background-color: $baseSalary;
+      }
+    }
+  }
 }
