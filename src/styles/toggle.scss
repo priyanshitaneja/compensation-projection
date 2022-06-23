@@ -7,10 +7,10 @@
 .switch {
   width: 45px;
   padding: 3px;
+  background-color: $light-grey;
   border: 1px solid $grey;
-  box-sizing: border-box;
-  transition: all 0.3s;
   border-radius: 20px;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
