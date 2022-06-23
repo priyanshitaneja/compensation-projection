@@ -4,8 +4,22 @@
   padding-top: 10px;
 }
 
+.components {
+  .benefits,
+  .target,
+  .sign-on,
+  .equity,
+  .base {
+    span {
+      color: $dark-grey;
+      font-size: 12px;
+    }
+  }
+}
+
 .switch {
   width: 45px;
+  height: 23px;
   padding: 3px;
   background-color: $light-grey;
   border: 1px solid $grey;
@@ -23,23 +37,23 @@
   transition: all 0.3s;
   left: 22px;
 
-  &.benefits {
+  &.benefits-toggle {
     background-color: $benefits;
   }
 
-  &.target {
+  &.target-toggle {
     background-color: $targetBonus;
   }
 
-  &.sign-on {
+  &.sign-on-toggle {
     background-color: $signOnBonus;
   }
 
-  &.equity {
+  &.equity-toggle {
     background-color: $equity;
   }
 
-  &.base-salary {
+  &.base-salary-toggle {
     background-color: $baseSalary;
   }
 }
