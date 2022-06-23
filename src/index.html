@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compensation Projection</title>
+    <meta name="description" content="An employee compensation projection" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">Compensation Projection</h1>
+      <p class="header-des">
+        Here's what your total compensation amount could look like over
+        time.Explore with various scenarios and see your earning potential.
+      </p>
+    </header>
+    <section class="main-section flex flex-row flex-jsb">
+      <div class="menu">
+        <!-- dropdown -->
+        <div class="flex flex-col components">
+          <div class="flex flex-row flex-jsb">
+            <div>Benefits</div>
+            <div class="switch" onclick="this.classList.toggle('toggle-off')">
+              <div class="toggle benefits">
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row flex-jsb">
+            <div>Target Bonus</div>
+            <div class="switch" onclick="this.classList.toggle('toggle-off')">
+              <div class="toggle target">
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row flex-jsb">
+            <div>Sign-on Bonus</div>
+            <div class="switch" onclick="this.classList.toggle('toggle-off')">
+              <div class="toggle sign-on">
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row flex-jsb">
+            <div>Equity</div>
+            <div class="switch" onclick="this.classList.toggle('toggle-off')">
+              <div class="toggle equity">
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row flex-jsb">
+            <div>Base Salary</div>
+            <div class="switch" onclick="this.classList.toggle('toggle-off')">
+              <div class="toggle base-salary">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="graph" style="width: 60%; background-color: red"></div>
+    </section>
+  </body>
+</html>
