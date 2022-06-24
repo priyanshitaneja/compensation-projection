@@ -6,10 +6,10 @@
 
 .components {
   .benefits,
-  .target,
-  .sign-on,
+  .targetBonus,
+  .signOnBonus,
   .equity,
-  .base {
+  .baseSalary {
     span {
       color: $dark-grey;
       font-size: 12px;
