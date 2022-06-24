@@ -1,0 +1,26 @@
+@import "./colors.scss";
+
+.modal-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 50px auto;
+  text-align: right;
+
+  .component-name,
+  .component-heading {
+    text-align: left;
+    text-transform: capitalize;
+  }
+}
+
+th,
+td {
+  padding: 10px 20px;
+  border: 1px solid $light-grey;
+  color: $dark-grey;
+}
+
+th {
+  background-color: $light-grey;
+  border-color: $grey;
+}
