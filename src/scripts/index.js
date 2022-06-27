@@ -26,7 +26,6 @@ const currentSalary = {
 };
 
 //functions
-
 const updateTotalValue = (component, targetSwitch, year) => {
   const totalSpan = document.querySelector(
     `.graph .${year} .total-salary`,
@@ -78,7 +77,7 @@ const setBarHeight = () => {
   }
 };
 
-const updateValues = (year) => {
+const updateCategoryValues = (year) => {
   for (let key of components) {
     const valueSpan = document.querySelector(`.components .${key} span`);
     valueSpan.innerHTML = "$ " + data[year][key];
@@ -142,8 +141,8 @@ const resetToggle = () => {
 const resetBarHeight = () => {
   Array.from(years).forEach((year) => {
     Array.from(components).forEach((component) => {
-      const x = document.querySelector(`.${year} .${component}`);
-      x.style.display = "block";
+      const bar = document.querySelector(`.${year} .${component}`);
+      bar.style.display = "block";
     });
   });
 };
@@ -153,10 +152,11 @@ dropdownSelect.addEventListener("change", (e) => {
   dropdownValue = e.target.value;
   resetToggle();
   resetBarHeight();
+  setTotal();
   if (dropdownValue === "all") {
     setCategoryTotal();
   } else {
-    updateValues(dropdownValue);
+    updateCategoryValues(dropdownValue);
   }
 });
 
