@@ -24,7 +24,6 @@ let tbody = document.createElement("tbody");
 
 table.appendChild(thead);
 table.appendChild(tbody);
-// table.setAttribute("border", "1");
 
 // Adding the entire table to the modal
 document.getElementById("modal").appendChild(table);

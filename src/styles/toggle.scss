@@ -37,23 +37,23 @@
   transition: all 0.3s;
   left: 22px;
 
-  &.benefits-toggle {
+  &.benefits {
     background-color: $benefits;
   }
 
-  &.target-toggle {
+  &.targetBonus {
     background-color: $targetBonus;
   }
 
-  &.sign-on-toggle {
+  &.signOnBonus {
     background-color: $signOnBonus;
   }
 
-  &.equity-toggle {
+  &.equity {
     background-color: $equity;
   }
 
-  &.base-salary-toggle {
+  &.baseSalary {
     background-color: $baseSalary;
   }
 }
