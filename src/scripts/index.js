@@ -3,6 +3,7 @@ import "../styles/common.scss";
 import "../styles/colors.scss";
 import "../styles/toggle.scss";
 import "../styles/modal.scss";
+import "../styles/loader.scss";
 
 import "./modal.js";
 import { data } from "./data.js";
@@ -18,7 +19,6 @@ const years = Object.keys(data); // years
 const switchList = document.getElementsByClassName("switch"); //list of all toggle switches
 
 //functions
-
 const setTotal = () => {
   for (let key in data) {
     const valueSpan = document.querySelector(`.graph .${key} .total-salary`);
@@ -112,7 +112,6 @@ const resetBarHeight = () => {
 };
 
 // event listeners
-
 dropdownSelect.addEventListener("change", (e) => {
   dropdownValue = e.target.value;
   resetToggle();
@@ -133,4 +132,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 Array.from(switchList).forEach((element) => {
   element.addEventListener("click", handleToggle);
+});
+
+//loader
+window.addEventListener ("load", () => {
+  document.querySelector(".loader").style.display = "none";
 });
