@@ -17,15 +17,12 @@ const years = Object.keys(data); // years
 
 const switchList = document.getElementsByClassName("switch"); //list of all toggle switches
 
-// const updateTotal = year => {
-//   const val =  document.querySelector(`.graph .${year} .total-salary`);
-//   val.innerHTML = data[year].total;
-// };
+//functions
 
 const setTotal = () => {
   for (let key in data) {
-    const val = document.querySelector(`.graph .${key} .total-salary`);
-    val.innerHTML = "$ " + data[key].total;
+    const valueSpan = document.querySelector(`.graph .${key} .total-salary`);
+    valueSpan.innerHTML = "$ " + data[key].total;
   }
 };
 
@@ -48,19 +45,19 @@ const setBarHeight = () => {
   }
 };
 
-const updateValues = (year) => {
+const updateValues = year => {
   for (let key of components) {
     const valueSpan = document.querySelector(`.components .${key} span`);
     valueSpan.innerHTML = "$ " + data[year][key];
   }
 };
 
-const handleToggle = (e) => {
+const handleToggle = e => {
   if (dropdownValue !== "all") handleTogglePerYear(e);
   else handleToggleAll(e);
 };
 
-const handleTogglePerYear = (e) => {
+const handleTogglePerYear = e => {
   const targetSwitch = e.target;
   const toggle = targetSwitch.querySelector(".toggle");
   const toggleClass = toggle.classList[1];
@@ -76,8 +73,8 @@ const handleTogglePerYear = (e) => {
   }
 };
 
-const handleToggleAll = (e) => {
-  let targetSwitch = e.target;
+const handleToggleAll = e => {
+  const targetSwitch = e.target;
   const toggle = targetSwitch.querySelector(".toggle");
   const toggleClass = toggle.classList[1];
 
