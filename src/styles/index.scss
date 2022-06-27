@@ -13,6 +13,10 @@
   .header-title {
     margin-bottom: 10px;
   }
+
+  .header-des {
+    color: $dark-grey;
+  }
 }
 
 /* main section */
@@ -50,6 +54,7 @@
     .bar {
       width: 120px;
       align-self: flex-end;
+      color: $dark-grey;
 
       .benefits {
         background-color: $benefits;
