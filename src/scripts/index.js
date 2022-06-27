@@ -26,38 +26,28 @@ const currentSalary = {
 };
 
 //functions
+
+const updateTotalValue = (component, targetSwitch, year) => {
+  const totalSpan = document.querySelector(
+    `.graph .${year} .total-salary`,
+  );
+  if (targetSwitch.classList.contains("toggle-off")) {
+    currentSalary[year] =
+      currentSalary[year] - data[year][component];
+    totalSpan.innerHTML = "$ " + currentSalary[year];
+  } else {
+    currentSalary[year] =
+      currentSalary[year] + data[year][component];
+    totalSpan.innerHTML = "$ " + currentSalary[year];
+  }
+};
+
 const updateTotal = (component, targetSwitch) => {
   if (dropdownValue !== "all") {
-    const totalSpan = document.querySelector(
-      `.graph .${dropdownValue} .total-salary`,
-    );
-    if (targetSwitch.classList.contains("toggle-off")) {
-      currentSalary[dropdownValue] =
-        currentSalary[dropdownValue] - data[dropdownValue][component];
-      totalSpan.innerHTML = "$ " + currentSalary[dropdownValue];
-    } else {
-      currentSalary[dropdownValue] =
-        currentSalary[dropdownValue] + data[dropdownValue][component];
-      totalSpan.innerHTML = "$ " + currentSalary[dropdownValue];
-    }
+    updateTotalValue(component, targetSwitch, dropdownValue);
   } else {
-    console.log("update for all");
-    if (targetSwitch.classList.contains("toggle-off")) {
-      for (let year of years) {
-        const totalSpan = document.querySelector(
-          `.graph .${year} .total-salary`,
-        );
-        currentSalary[year] = currentSalary[year] - data[year][component];
-        totalSpan.innerHTML = "$ " + currentSalary[year];
-      }
-    } else {
-      for (let year of years) {
-        const totalSpan = document.querySelector(
-          `.graph .${year} .total-salary`,
-        );
-        currentSalary[year] = currentSalary[year] + data[year][component];
-        totalSpan.innerHTML = "$ " + currentSalary[year];
-      }
+    for (let year of years) {
+      updateTotalValue(component, targetSwitch, year);
     }
   }
 };
