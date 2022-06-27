@@ -1,0 +1,53 @@
+@import "./colors.scss";
+
+.modal {
+  width: 700px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: #00000029 0 1px 4px;
+  background-color: $white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+
+  .modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: none;
+    color: $dark-grey;
+  }
+}
+
+.modal-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 60px auto;
+  text-align: right;
+
+  .component-name,
+  .component-heading {
+    text-align: left;
+    text-transform: capitalize;
+  }
+}
+
+th,
+td {
+  padding: 10px 20px;
+  border: 1px solid $light-grey;
+  color: $dark-grey;
+}
+
+th {
+  background-color: $light-grey;
+  border-color: $grey;
+}

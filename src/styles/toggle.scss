@@ -1,0 +1,64 @@
+@import "./colors.scss";
+
+.components > div {
+  padding-top: 10px;
+}
+
+.components {
+  .benefits,
+  .targetBonus,
+  .signOnBonus,
+  .equity,
+  .baseSalary {
+    span {
+      color: $dark-grey;
+      font-size: 12px;
+    }
+  }
+}
+
+.switch {
+  width: 45px;
+  height: 23px;
+  padding: 3px;
+  background-color: $light-grey;
+  border: 1px solid $grey;
+  border-radius: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 15px;
+  height: 15px;
+  background-color: $grey;
+  border-radius: 100%;
+  position: relative;
+  transition: all 0.3s;
+  left: 22px;
+
+  &.benefits {
+    background-color: $benefits;
+  }
+
+  &.targetBonus {
+    background-color: $targetBonus;
+  }
+
+  &.signOnBonus {
+    background-color: $signOnBonus;
+  }
+
+  &.equity {
+    background-color: $equity;
+  }
+
+  &.baseSalary {
+    background-color: $baseSalary;
+  }
+}
+
+.switch.toggle-off .toggle {
+  left: 0;
+  background-color: $grey;
+}

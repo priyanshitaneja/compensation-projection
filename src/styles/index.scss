@@ -1,0 +1,86 @@
+@import "./colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+/* header */
+
+.header {
+  .header-title {
+    margin-bottom: 10px;
+  }
+
+  .header-des {
+    color: $dark-grey;
+  }
+}
+
+/* main section */
+
+.main-section {
+  height: 600px;
+
+  .menu {
+    border: 1px solid $grey;
+    border-radius: 10px;
+    width: 25%;
+
+    .dropdown {
+      width: 100%;
+      border: 1px solid $grey;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .graph {
+    width: 60%;
+    position: relative;
+
+    .compensation {
+      position: absolute;
+      right: 37px;
+      color: $dark-grey;
+      background-color: $white;
+      border: 1px solid $grey;
+      border-radius: 5px;
+      box-shadow: #0000001a 0 1px 2px 0;
+    }
+
+    .bar {
+      width: 120px;
+      align-self: flex-end;
+      color: $dark-grey;
+
+      .benefits {
+        background-color: $benefits;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .targetBonus {
+        background-color: $targetBonus;
+      }
+
+      .signOnBonus {
+        background-color: $signOnBonus;
+      }
+
+      .equity {
+        background-color: $equity;
+      }
+
+      .baseSalary {
+        background-color: $baseSalary;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .year {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
