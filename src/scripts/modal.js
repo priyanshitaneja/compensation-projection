@@ -8,9 +8,12 @@ const compensationBtn = document.getElementById("compensation");
 const modal = document.getElementById("modal");
 const modalCloseBtn = document.querySelector(".modal-close");
 
+let firstClick = 0;
+
 compensationBtn.addEventListener("click", () => {
   modal.classList.toggle("is-open");
-  if(modal.classList.contains("is-open")) {
+  if(firstClick === 0) {
+    firstClick = 1;
     fillTable();
   }
 });
@@ -87,3 +90,4 @@ export const fillTable = () => {
     }
   }
 };
+
