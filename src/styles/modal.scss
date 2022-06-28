@@ -1,5 +1,14 @@
 @import "./colors.scss";
 
+.modal-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .modal {
   width: 700px;
   height: 400px;
@@ -50,4 +59,9 @@ td {
 th {
   background-color: $light-grey;
   border-color: $grey;
+}
+
+.overlay {
+  background-color: #00000029;
+  z-index: 8;
 }

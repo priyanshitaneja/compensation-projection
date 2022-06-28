@@ -7,6 +7,7 @@ const components = Object.keys(data.year1);
 const compensationBtn = document.getElementById("compensation");
 const modal = document.getElementById("modal");
 const modalCloseBtn = document.querySelector(".modal-close");
+const modalContainer = document.querySelector(".modal-container");
 
 let firstClick = 0;
 
@@ -16,10 +17,16 @@ compensationBtn.addEventListener("click", () => {
     firstClick = 1;
     fillTable();
   }
+  if(modal.classList.contains("is-open")) {
+    modalContainer.classList.add("overlay");
+  }
 });
 
 modalCloseBtn.addEventListener("click", () => {
-  if (modal.classList.contains("is-open")) modal.classList.remove("is-open");
+  if (modal.classList.contains("is-open")) {
+    modal.classList.remove("is-open");
+    modalContainer.classList.remove("overlay");
+  }
 });
 
 //creating table structure
